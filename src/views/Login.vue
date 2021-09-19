@@ -1,6 +1,6 @@
 <template>
   <div>
-    Ji
+    Log me in
   </div>
 
 </template>
