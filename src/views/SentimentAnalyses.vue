@@ -1,12 +1,14 @@
 <template>
   <div>
-    Log me in
+    <DataTable/>
   </div>
 </template>
 
 <script>
+import DataTable from "@/components/DataTable";
 export default {
-  name: 'SentimentAnalyses'
+  name: 'SentimentAnalyses',
+  components: {DataTable}
 }
 </script>
 

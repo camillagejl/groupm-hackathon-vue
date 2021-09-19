@@ -1,6 +1,5 @@
 <template>
   <nav class="nav">
-
     <div class="logo">
       <img
           class="logo"
@@ -20,27 +19,78 @@
       <div>
         v
       </div>
+    </div>
 
+    <div>
+    <b>Analysis terms:</b> [IKEA]
+    </div>
+    <br>
+    <div>
+      <b>Media:</b> [any]
+    </div>
+    <br>
+    <div>
+    <b>Date span:</b> [01-09-2020 - 01-09-2021]
     </div>
 
     <ul>
       <li>
         <router-link
-            class="selected_route"
+            :class="{ 'selected_route': (currentRouteName === 'Campaigns') }"
             to="/"
-        >Overview</router-link>
+        >
+          Overview
+          </router-link>
       </li>
       <li>
-        <router-link to="/campaigns">Campaigns</router-link>
+        <router-link
+            to="/campaigns"
+            :class="{ 'selected_route': (currentRouteName === 'Campaigns') }"
+        >
+          Media analytics
+        </router-link>
       </li>
       <li>
-        <router-link to="/sentimentanalyses">Sentiment analysis</router-link>
+        <router-link
+            to="/sentimentanalyses"
+            :class="{ 'selected_route': (currentRouteName === 'SentimentAnalyses') }"
+        >
+          Mention analytics
+        </router-link>
       </li>
       <li>
-        <router-link to="/brandcomparison">Brand comparison</router-link>
+        <router-link
+            to="/sentimentanalyses"
+            :class="{ 'selected_route': (currentRouteName === 'SentimentAnalyses') }"
+        >
+          Brand comparison
+        </router-link>
+      </li>
+      <br>
+      <br>
+      <li>
+        <router-link
+            to="/brandcomparison"
+            :class="{ 'selected_route': (currentRouteName === 'BrandComparison') }"
+        >
+          New analysis
+        </router-link>
       </li>
       <li>
-        <router-link to="/settings">Settings</router-link>
+        <router-link
+            to="/settings"
+            :class="{ 'selected_route': (currentRouteName === 'Setting') }"
+        >
+          Settings
+        </router-link>
+      </li>
+      <li>
+        <router-link
+            to="/settings"
+            :class="{ 'selected_route': (currentRouteName === 'Setting') }"
+        >
+          Sign out
+        </router-link>
       </li>
     </ul>
   </nav>
@@ -55,7 +105,12 @@
  * props=""/>
  * */
 export default {
-  name: 'Navigation'
+  name: 'Navigation',
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    }
+  }
 }
 </script>
 
@@ -92,7 +147,7 @@ ul {
 
 .logo {
   width: 250px;
-  margin: 48px 0 24px 0;
+  margin: 24px 0 24px 0;
 
   img {
     width: 100%;
