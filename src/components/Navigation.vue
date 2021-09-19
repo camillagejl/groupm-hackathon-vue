@@ -31,16 +31,16 @@
         >Overview</router-link>
       </li>
       <li>
-        <router-link to="/">Campaigns</router-link>
+        <router-link to="/campaigns">Campaigns</router-link>
       </li>
       <li>
-        <router-link to="/">Sentiment analysis</router-link>
+        <router-link to="/sentimentanalyses">Sentiment analysis</router-link>
       </li>
       <li>
-        <router-link to="/">Brand comparison</router-link>
+        <router-link to="/brandcomparison">Brand comparison</router-link>
       </li>
       <li>
-        <router-link to="/">Settings</router-link>
+        <router-link to="/settings">Settings</router-link>
       </li>
     </ul>
   </nav>
@@ -64,6 +64,7 @@ export default {
 .nav {
   background-color: var(--color-main-500);
   height: 100%;
+  box-sizing: border-box;
   padding: 24px;
   color: white;
   font-size: 20px;

@@ -2,7 +2,9 @@
   <div id="app">
     <Navigation/>
 
+    <div class="page_content">
     <router-view/>
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,6 @@
   --color-main-500: #0A2756;
 
   --headline-font: 'Montserrat', sans-serif;
-
 }
 
 body {
@@ -25,6 +26,11 @@ body {
 #app {
   display: flex;
   height: 100vh;
+}
+
+.page_content {
+  width: 100%;
+  height: 100%;
 }
 
 </style>
