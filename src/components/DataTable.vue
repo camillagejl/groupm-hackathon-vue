@@ -1,8 +1,5 @@
 <template>
   <div class="data_table">
-
-    <h1>Platform analytics</h1>
-
     <md-table v-model="users" md-sort="name" md-sort-order="asc" md-card>
       <md-table-row slot="md-table-row" slot-scope="{ item }">
         <md-table-cell md-label="Platform" md-sort-by="platform">{{ item.platform }}</md-table-cell>

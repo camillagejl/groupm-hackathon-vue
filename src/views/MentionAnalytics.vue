@@ -1,13 +1,13 @@
 <template>
   <div>
-    <DataTable/>
+    Mention analytics
   </div>
 </template>
 
 <script>
 import DataTable from "@/components/DataTable";
 export default {
-  name: 'SentimentAnalyses',
+  name: 'MentionAnalytics',
   components: {DataTable}
 }
 </script>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    Log me in
+    Settings
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Setting'
+  name: 'Settings'
 }
 </script>
 

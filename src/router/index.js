@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
-import BrandComparison from "@/views/BrandComparison";
-import SentimentAnalyses from "@/views/SentimentAnalyses";
-import Setting from "@/views/Setting";
+import SentimentAnalyses from "@/views/MentionAnalytics";
+import Overview from "@/views/Overview";
+import PlatformAnalytics from "@/views/PlatformAnalytics";
+import MentionAnalytics from "@/views/MentionAnalytics";
+import CompareAnalytics from "@/views/CompareAnalytics";
+import Settings from "@/views/Settings";
+import NewAnalysis from "@/views/NewAnalysis";
+import AnalysisLibrary from "@/views/AnalysisLibrary";
 
 Vue.use(VueRouter)
 
@@ -11,28 +16,43 @@ let Campaigns;
 const routes = [
   {
     path: '/',
-    name: 'Login',
-    component: Login
+    name: 'Overview',
+    component: Overview
   },
   {
-    path: '/brandcomparison',
-    name: 'BrandComparison',
-    component: BrandComparison
+    path: '/overview',
+    name: 'Overview',
+    component: Overview
   },
   {
-    path: '/campaigns',
-    name: 'Campaigns',
-    component: Campaigns
+    path: '/platform_analytics',
+    name: 'PlatformAnalytics',
+    component: PlatformAnalytics
   },
   {
-    path: '/sentimentanalyses',
-    name: 'SentimentAnalyses',
-    component: SentimentAnalyses
+    path: '/mention_analytics',
+    name: 'MentionAnalytics',
+    component: MentionAnalytics
+  },
+  {
+    path: '/compare_analytics',
+    name: 'CompareAnalytics',
+    component: CompareAnalytics
+  },
+  {
+    path: '/new_analysis',
+    name: 'NewAnalysis',
+    component: NewAnalysis
+  },
+  {
+    path: '/analysis_library',
+    name: 'AnalysisLibrary',
+    component: AnalysisLibrary
   },
   {
     path: '/settings',
-    name: 'Setting',
-    component: Setting
+    name: 'Settings',
+    component: Settings
   }
 ]
 

@@ -1,12 +1,12 @@
 <template>
   <div>
-    Log me in
+    Analysis library
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Campaigns'
+  name: 'AnalysisLibrary'
 }
 </script>
 

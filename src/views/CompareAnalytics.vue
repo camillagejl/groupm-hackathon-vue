@@ -1,12 +1,12 @@
 <template>
   <div>
-    Login
+    Compare analytics
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Login'
+  name: 'CompareAnalytics'
 }
 </script>
 

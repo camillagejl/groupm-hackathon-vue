@@ -36,6 +36,7 @@ h1 {
 
 .page_content {
   padding: 72px 48px 48px 48px;
+  overflow-y: auto;
 }
 
 #app {
