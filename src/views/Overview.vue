@@ -12,8 +12,13 @@ export default {
 
 <style scoped lang="scss">
 
+div {
+  height: 100%;
+}
+
 img {
-  width: 80%;
+  height: 100%;
+  width: auto;
 }
 
 </style>

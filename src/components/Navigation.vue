@@ -1,86 +1,90 @@
 <template>
   <nav class="nav">
     <div class="top">
-    <div class="logo">
-      <img
-          class="logo"
-          src="../assets/Smartmetrics@2x.png"
-      alt="App logo in navigation bar"
+      <div class="logo">
+        <img
+            class="logo"
+            src="../assets/logo.png"
+            alt="App logo in navigation bar"
+        >
+      </div>
+
+      <router-link
+          to="/overview"
       >
-    </div>
-
-    <div class="company_logo">
-      <img
-          src="../assets/ikea_logo.png"
-          alt="Company logo in navigation bar"
+        <div class="company_logo">
+          <img
+              src="../assets/ikea_logo.png"
+              alt="Company logo in navigation bar"
           >
-      <div>
-        IKEA <br> insights
+          <div>
+            IKEA <br> insights
+          </div>
+          <div class="arrow">
+            &#748;
+          </div>
+        </div>
+      </router-link>
+
+      <div class="search_terms">
+        <div>
+          Analysis terms: <strong>IKEA</strong>
+        </div>
+        <div>
+          Media: <strong>any</strong>
+        </div>
+        <div>
+          Date span: <strong>01-09-2020 - 01-09-2021</strong>
+        </div>
       </div>
-      <div class="arrow">
-        &#748;
-      </div>
-    </div>
 
-    <div class="search_terms">
-    <div>
-    Analysis terms: <strong>IKEA</strong>
-    </div>
-    <div>
-      Media: <strong>any</strong>
-    </div>
-    <div>
-    Date span: <strong>01-09-2020 - 01-09-2021</strong>
-    </div>
-    </div>
+      <hr>
 
-    <hr>
-
-    <ul>
-      <li>
-        <router-link
-            :class="{ 'selected_route': (currentRouteName === 'Overview' || currentRouteName === '') }"
-            to="/overview"
-        >
-          Overview
+      <ul>
+        <li>
+          <router-link
+              :class="{ 'selected_route': (currentRouteName === 'Overview' || currentRouteName === '') }"
+              to="/overview"
+          >
+            Overview
           </router-link>
-      </li>
-      <li>
-        <router-link
-            to="/platform_analytics"
-            :class="{ 'selected_route': (currentRouteName === 'PlatformAnalytics') }"
-        >
-          Platform analytics
-        </router-link>
-      </li>
-      <li>
-        <router-link
-            to="/mention_analytics"
-            :class="{ 'selected_route': (currentRouteName === 'MentionAnalytics') }"
-        >
-          Mention analytics
-        </router-link>
-      </li>
-      <li>
-        <router-link
-            to="/compare_analytics"
-            :class="{ 'selected_route': (currentRouteName === 'CompareAnalytics') }"
-        >
-          Compare analytics
-        </router-link>
-      </li>
-    </ul>
+        </li>
+        <li>
+          <router-link
+              to="/platform_analytics"
+              :class="{ 'selected_route': (currentRouteName === 'PlatformAnalytics') }"
+          >
+            Platform analytics
+          </router-link>
+        </li>
+        <li>
+          <router-link
+              to="/mention_analytics"
+              :class="{ 'selected_route': (currentRouteName === 'MentionAnalytics') }"
+          >
+            Mention analytics
+          </router-link>
+        </li>
+        <li>
+          <router-link
+              to="/compare_analytics"
+              :class="{ 'selected_route': (currentRouteName === 'CompareAnalytics') }"
+          >
+            Compare analytics
+          </router-link>
+        </li>
+        <li>
+          <router-link
+              to="/new_analysis"
+              :class="{ 'selected_route': (currentRouteName === 'NewAnalysis') }"
+          >
+            New analysis
+          </router-link>
+        </li>
+      </ul>
       <hr>
     </div>
     <ul>
-      <li>
-        <router-link
-            to="/new_analysis"
-            :class="{ 'selected_route': (currentRouteName === 'NewAnalysis') }"
-        >
-          New analysis
-        </router-link>
-      </li>
       <li>
         <router-link
             to="/analysis_library"
@@ -128,7 +132,7 @@ export default {
   padding: 24px;
   color: white;
   font-size: 16px;
-  min-width: 300px;
+  min-width: 350px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -168,8 +172,8 @@ ul {
 }
 
 .logo {
-  width: 250px;
-  margin: 0 0 24px 0;
+  width: 200px;
+  margin: 0 0 12px 0;
 
   img {
     width: 100%;
@@ -184,6 +188,7 @@ ul {
   padding: 12px 24px 12px 12px;
   background-color: rgba(255, 255, 255, .25);
   border-radius: 25px;
+  color: white !important;
 
   img {
     width: 124px;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    Analysis library
+    <img src="../assets/analysis_library.png">
   </div>
 </template>
 
@@ -11,5 +11,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+div {
+  height: 100%;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
 
 </style>
